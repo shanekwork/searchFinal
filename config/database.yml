@@ -56,5 +56,4 @@ production:
   encoding: unicode
   database: testsearch_production
   pool: 5
-  username: shane
   password:
