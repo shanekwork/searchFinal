@@ -7,6 +7,7 @@ Testsearch::Application.routes.draw do
 
   get 'pages/welcome'
   get 'pages/extra'
+  get "/products/:id" => "products#index"
   
   resources :products do#, :only => [:index, :edit, :update]
     collection { post :import }
@@ -60,4 +61,5 @@ Testsearch::Application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+  match ':controller(/:action(/:id))', :via => :get
 end

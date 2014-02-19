@@ -5,7 +5,9 @@
 	<% end %>
 </div>
 
-
+<br />
+<%= link_to("Search page full", {:controller => 'products', :action => 'index'}) %>
+<br />
 
 <h1>Import</h1>
 <%= form_tag import_products_path, multipart: true do %>

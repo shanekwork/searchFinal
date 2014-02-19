@@ -1,13 +1,8 @@
-<%= form_tag products_path, method: :get do %>
-  <%= text_field_tag :search, params[:Search], size: 30 %>
-  <%= submit_tag "search", name: nil %>
-<% end %>
 
-<h1>Import</h1>
-<%= form_tag import_products_path, multipart: true do %>
-  <%= file_field_tag :file %>
-  <%= submit_tag "Import" %>
-<% end %>
+
+<br />
+<%= link_to("Search page empty", {:controller => 'pages', :action => 'welcome'}) %>
+<br />
 
 
 <h3>Listing products</h3>
@@ -42,4 +37,6 @@
 
 <br>
 
+<!--
 <%= link_to 'New Product', new_product_path %>
+-->
