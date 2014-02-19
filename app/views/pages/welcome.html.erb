@@ -1,0 +1,15 @@
+<div class="welcomeSearch">
+	<%= form_tag products_path, method: :get do %>
+  		<%= text_field_tag :search, params[:Search], size: 30, :value => "", :placeholder => "Search here..." %>
+  		<%= submit_tag "search", name: nil %>
+	<% end %>
+</div>
+
+
+
+<h1>Import</h1>
+<%= form_tag import_products_path, multipart: true do %>
+  <%= file_field_tag :file %>
+  <%= submit_tag "Import" %>
+<% end %>
+

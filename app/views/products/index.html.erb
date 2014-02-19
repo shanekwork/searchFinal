@@ -1,0 +1,45 @@
+<%= form_tag products_path, method: :get do %>
+  <%= text_field_tag :search, params[:Search], size: 30 %>
+  <%= submit_tag "search", name: nil %>
+<% end %>
+
+<h1>Import</h1>
+<%= form_tag import_products_path, multipart: true do %>
+  <%= file_field_tag :file %>
+  <%= submit_tag "Import" %>
+<% end %>
+
+
+<h3>Listing products</h3>
+
+<table id="tableimg" border=1>
+  <thead>
+    <tr>
+      <!--<th>itemcode</th>-->
+      <th>Productcode</th>
+      <th>Description</th>
+      <th>Image</th>
+      <!--<th></th>
+      <th></th>
+      <th></th>-->
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @products.each do |product| %>
+      <tr>
+        <!--<td><%= product.itemcode %>-->
+        <td><%= product.productcode %></td>
+        <td><%= product.description %></td>
+        <td><%= link_to image_tag(product.image), product.url %></td>
+        <!--<td><%= link_to 'Show', product %></td>
+        <td><%= link_to 'Edit', edit_product_path(product) %></td>
+        <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>-->
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Product', new_product_path %>
