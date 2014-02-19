@@ -2,8 +2,8 @@ Testsearch::Application.routes.draw do
 
   resources :search_suggestions
 
-  #root 'pages#welcome'
-  root 'products#index'
+  root 'pages#welcome'
+  #root 'products#index'
 
   get 'pages/welcome'
   get 'pages/extra'
