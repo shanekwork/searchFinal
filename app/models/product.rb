@@ -7,7 +7,7 @@ class Product < ActiveRecord::Base
 	end
 
 	def self.search(term)
-		where("description ILIKE :term or keyword ILIKE :term", term: "%#{term}%")
+		where("productcode ILIKE :term or description ILIKE :term or keyword ILIKE :term", term: "%#{term}%")
 	end
 
 end

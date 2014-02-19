@@ -16,3 +16,6 @@
 	max-width: 40px;
 	border-color: #333;
 }
+
+#tableimg a:hover {background: #fff;}
+#tableimg a:active {background: #fff;}

@@ -4,7 +4,7 @@ class ProductsController < ApplicationController
 
   def import
     Product.import(params[:file])
-    redirect_to root_url, notice: "Imported"
+    redirect_to root_url, notice: "CSV Imported"
   end
 
   # GET /products
